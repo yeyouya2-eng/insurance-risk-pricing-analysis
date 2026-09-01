@@ -1,0 +1,24 @@
+INSURANCE PRICING ANALYSIS - ANALYST-FOCUSED VERSION
+=======================================================
+
+HYPOTHESIS TESTS
+Smoker vs non-smoker: t=32.752, p=5.89e-103
+  Smoker avg: $32,050.23 | Non-smoker avg: $8,434.27
+BMI-charges correlation (overall): r=0.198, p=2.46e-13
+Regional ANOVA: F=2.970, p=0.0309
+BMI-charges, smokers only: r=0.806
+BMI-charges, non-smokers only: r=0.084
+
+LINEAR REGRESSION (interpretable pricing model)
+MAE: $2,756.90 | R^2: 0.8653
+
+Coefficients:
+smoker_flag        -21206.908812
+bmi_x_smoker         1470.862534
+region_southwest    -1233.426402
+region_southeast     -967.480455
+region_northwest     -631.416402
+sex                  -525.230854
+children              463.652623
+age                   263.390620
+bmi                    20.250788
