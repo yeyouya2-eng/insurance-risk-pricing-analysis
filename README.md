@@ -5,10 +5,14 @@
 ## Objective
 Identify which risk factors drive insurance charges most strongly, and quantify their dollar impact — the analytical approach underlying premium-setting and risk segmentation in insurance underwriting.
 
+## Visual Insights
+![Statistical Dashboard](insurance_analysis_dashboard.jpg)
+*Figure 1: Statistical validation and regression coefficients generated via Python (matplotlib/seaborn).*
+
 ## Methodology
 1. **Hypothesis testing**: Welch's t-test (smoker vs. non-smoker), Pearson correlation (BMI vs. charges), one-way ANOVA (regional differences), and a sub-group correlation check to test for a BMI × smoking interaction effect.
 2. **Interpretable pricing model**: Linear regression with an explicit BMI × Smoker interaction term — chosen over a black-box model (e.g. XGBoost) because coefficients need to be directly explainable for a pricing/underwriting audience.
-3. **Interactive dashboard**: Built in Tableau Public for exploratory drill-down by region, BMI category, and smoking status (see `TABLEAU_GUIDE.md` for build steps).
+3. **Interactive dashboard**: Built in Tableau Public for exploratory drill-down by region, BMI category, and smoking status.
 
 ## Key Findings
 
@@ -28,14 +32,13 @@ Identify which risk factors drive insurance charges most strongly, and quantify 
 Underwriting models that price BMI and smoking as independent, additive factors will systematically overprice healthy-weight smokers and underprice obese smokers. A joint smoker × BMI-band pricing tier would more accurately reflect true cost risk.
 
 ## Interactive Dashboard
-[https://public.tableau.com/app/profile/yongyi.ye/viz/Insurance_Risk_Analysis/Dashboard1?publish=yes] — see `TABLEAU_GUIDE.md` for the exact build steps.
+[View Interactive Tableau Dashboard](https://public.tableau.com/app/profile/yongyi.ye/viz/Insurance_Risk_Analysis/Dashboard1?publish=yes) 
 
 ## Files
 - `analysis_v2.py` — full analysis pipeline (hypothesis tests + regression)
 - `Insurance_Risk_Analysis_Report.pdf` — polished write-up with charts and business recommendation
-- `insurance_analysis_dashboard.png` — statistical results dashboard (Python)
+- `insurance_analysis_dashboard.jpg` — statistical results dashboard (Python)
 - `insurance_tableau_ready.csv` — cleaned dataset with BMI/age categories for Tableau
-- `TABLEAU_GUIDE.md` — step-by-step guide to build the interactive dashboard
 - `results_summary_v2.txt` — raw statistical output
 - `insurance.csv` — source dataset
 
