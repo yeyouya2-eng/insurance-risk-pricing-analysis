@@ -6,7 +6,7 @@
 Identify which risk factors drive insurance charges most strongly, and quantify their dollar impact — the analytical approach underlying premium-setting and risk segmentation in insurance underwriting.
 
 ## Visual Insights
-![Statistical Dashboard](insurance_analysis_dashboard.jpg)
+![Statistical Dashboard](insurance_analysis_dashboard.png)
 *Figure 1: Statistical validation and regression coefficients generated via Python (matplotlib/seaborn).*
 
 ## Methodology
